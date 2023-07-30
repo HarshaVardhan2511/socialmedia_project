@@ -1,0 +1,30 @@
+USE social_media;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  profile VARCHAR(50),
+  password VARCHAR(50),
+  headline VARCHAR(100),
+  token VARCHAR(500)
+);
+
+CREATE TABLE posts (
+  profile VARCHAR(50),
+  content VARCHAR(10000),
+  likes INTEGER,
+  shares INTEGER
+);
+
+
+
+
+
+insert into users (name, profile, password, headline, token)
+values ('Harsha','harsha_2511','lilly@2114','Learner','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'), ('Lilly','lilly_1421','harsha@2114','Achiever','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+
+
+
+insert into posts (profile, content, likes, shares)
+values ('harsha_2511','The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today its seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.', 10,5),('air_11','The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today its seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.', 100,54);
